@@ -1,0 +1,219 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    float: left;
+    /* border: 1px solid red; */
+    padding: 5px;
+  }
+
+@media only screen and (min-width: 1000px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+@font-face {
+    font-family: 'LibreBaskerville';
+    src: url('Libre_Baskerville/librebaskerville-regular-webfont.woff2') format('woff2'),
+         url('Libre_Baskerville/librebaskerville-regular-webfont.woff') format('woff'),
+         url('Libre_Baskerville/LibreBaskerville-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+h1 {
+    text-align: center;
+    margin: 8%;
+    color: #c98842;
+    font-family: LibreBaskerville;
+}
+
+.big_h1 {
+    font-size: 72px;
+}
+
+h2 {
+    color: #2f8586;
+    font-size: 40px;
+    font-family: LibreBaskerville;
+}
+
+h6 {
+    font-size: 200%;
+    font-weight: normal;
+    padding-bottom: 2%;
+    margin: 0px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+a {
+    color: inherit;
+}
+
+p {
+    margin: 5px;
+    font-size: 25px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.logo {
+    padding: 1% 1% 1% 1%;
+}
+
+.menu-content { 
+    color: #c98842;
+    display: none;
+    background-color: #002130;
+    text-align: center;
+    font-family: LibreBaskerville;
+}
+.collapsible-menu {
+    position: relative;
+}
+.collapsible-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+.collapsible-menu a {
+    /* display: inline;  */
+    text-decoration: none;
+    font-size: 30px;
+    padding: 0px 10px 0 10px;
+    
+}
+.collapsible-menu label {
+    font-size: 60;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    padding: 5%;
+    color: #c98842;
+}
+input#menu {
+    display: none;
+}
+input:checked ~ .menu-content {
+    /* max-height: 100%; */
+    display: inline-block;
+    width: 100%;
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .menu-content {
+        display: block;
+        overflow: auto;
+        padding: 0;
+        color: #c98842;
+        background: none;
+    }
+    .collapsible-menu {
+        display: flex;
+        border-bottom: none;
+        background-color: none;
+        float: right;
+        padding: 2% 2% 0 0;
+    }
+    .collapsible-menu ul {
+        list-style-type: none;
+        padding: 0;
+        display: inline-flex;
+    }
+    .collapsible-menu a {
+        font-size: 20px;
+        text-decoration: none;
+        padding: 0 10px 0 10px;
+    }
+    .collapsible-menu label {
+        display: none;
+    }
+}
+
+.terningbanner {
+    text-align: center;
+    margin: 8% 0 8% 1%;
+}
+.terningbanner img {
+    width: 100%;
+}
+
+.bilete {
+    vertical-align: middle;
+    background-color: white;
+}
+
+.teksten {
+    font-size: 20px;
+    }
+
+.litleteksten {
+    display: block;
+    text-align: justify;
+    padding: 2%;
+}
+.storeteksten {
+    display: none;
+    text-align: justify;
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .litleteksten {
+        display: none;
+    }
+    .storeteksten {
+        display: inline;
+        font-size: 20px;
+        text-align: justify;
+    }
+    .bilete {
+        padding: 2%;
+        background-color: #3d2923;;
+    }
+}
+
+.sosialemedier {
+    display: flex;
+    justify-content: space-around;
+    margin: 5% 0 2% 0;
+    font-size: 25px;
+}
+
+.sosialemedier:hover {
+    color: gray;
+}
+
+.sosialemedier i:hover{
+    color: black;
+    cursor: pointer;
+}
